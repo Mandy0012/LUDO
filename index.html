@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Ludo Masala</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              masala: {
+                red: '#D32F2F', // Chili
+                green: '#00897B', // Cardamom
+                yellow: '#FFB300', // Turmeric
+                blue: '#3949AB', // Indigo
+                bg: '#FFF8E1', // Cream/Milk
+                dark: '#3E2723' // Clove
+              }
+            },
+            animation: {
+              'bounce-short': 'bounce 0.5s infinite',
+              'spin-fast': 'spin 0.2s linear infinite',
+            },
+            gridTemplateColumns: {
+              '15': 'repeat(15, minmax(0, 1fr))',
+            },
+            gridTemplateRows: {
+              '15': 'repeat(15, minmax(0, 1fr))',
+            },
+            gridColumnStart: {
+              '13': '13', '14': '14', '15': '15', '16': '16'
+            },
+            gridColumnEnd: {
+              '13': '13', '14': '14', '15': '15', '16': '16'
+            },
+            gridRowStart: {
+              '13': '13', '14': '14', '15': '15', '16': '16'
+            },
+            gridRowEnd: {
+              '13': '13', '14': '14', '15': '15', '16': '16'
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Prevent pull-to-refresh on mobile to feel like native app */
+      body {
+        overscroll-behavior-y: contain;
+        touch-action: manipulation;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom": "https://aistudiocdn.com/react-dom@^19.2.0",
+    "react-dom/client": "https://aistudiocdn.com/react-dom@^19.2.0/client",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body class="bg-masala-bg text-masala-dark select-none overflow-hidden">
+    <div id="root"></div>
+  </body>
+</html>
